@@ -9,3 +9,26 @@ This code is only for educational purposes on fine tuning LLMs and has been expl
 | Parameters    | Typically involves **updating all the model's parameters**, but can also use techniques that modify a **subset of parameters** (e.g., parameter-efficient fine-tuning).    | A**ll the model's parameters** (weights) are usually updated.
 | Outcome    | A specialized model that performs well on specific tasks but may not retain the same level of general language understanding as before. | A more generally knowledgeable and capable model that can better understand and generate language across a wide range of contexts.
 
+## Quickstart
+
+1. In your terminal :
+
+```
+pip install requirements.txt
+```
+
+2. Go to your [AWS](https://us-east-1.console.aws.amazon.com/) account 
+3. Upload the datasets from the data folder in a S3 bucket
+4. Search Bedrock and click on get started
+5. Click on Custom models
+6. Click on Customize model
+7. Create a Fine-tuning job
+8. Select the model you want to fine-tune, set a name, a job name, the location of your S3 bucket, the output location (can be the same S3 bucket)
+9. Choose a role or create a new one.
+10. Click on create Fine-tuning job
+11. Once it's created and deployed you can replace the modelId in the main.py file with the arn of your custom model.
+12. To send a query change the prompt in the main.py file and run the file
+
+```
+python path/to/main.py
+```
