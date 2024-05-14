@@ -23,9 +23,9 @@ body = {
 }
 
 response = bedrock.invoke_model(
-  # use this modelId to test the model before fine-tuning
+  # use this modelId to test the model before fine-tuning. Cohere command light is an example.
   modelId="cohere.command-light-text-v14",
-  # use this modelId to test the model after fine-tuning and replace the arn of your model
+  # use this modelId to test the model after fine-tuning and replace with the arn of your model
   # modelId="arn:aws:bedrock:us-east-1:XXXXXXXXXXXX:provisioned-model/XXXXXXXXXXXX",
   body=json.dumps(body)
 )
